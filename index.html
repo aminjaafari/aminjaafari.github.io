@@ -1,7 +1,164 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css"  href="style.css" />
+	<link href="https://cdn.rawgit.com/rastikerdar/shabnam-font/v4.0.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.rawgit.com/rastikerdar/samim-font/v2.0.1/dist/font-face.css" rel="stylesheet" type="text/css" />
+</head>
+<body dir="rtl">
+	<div class="overlay" id="overlay"></div>
+	<div class="background"></div>
+	<div class="main">
+	<div class="avatar">
+		
+		<img alt="" src="svgA9382647734601051.png" />
+		
+		<div class="tea-cup">
+		<img width="6px" height="21px" src="smoke.png" />
+		<img width="6px" height="21px" src="smoke.png" />
+		<img width="54px" height="30px" src="tea-cup.png" />
+		
+		</div>
+	</div>
+	
+	
+	<div class="content">
+		<h1>محمدامین جعفری</h1>
+		<br>
+		<h3>طراح رابط کاربری وب</h3>
+		
+		<div class="menu">
+			<a href="#" id="portfolioLink"><span>نمونه کار</span></a>
+			<a href="#" id="contactLink"><span>ارتباط</span></a>
+		</div>
+	</div>
+	
+	
+	</div>
+	
+	
+	
+	<div id="portfolio" class="modal1">
+
+		<div class="portfolio">
+			<div class="header">
+			<span class="close1">&times;</span>
+			<span>نمونه کارها</span>
+		</div>
+		
+		<div class="content">
+		
+		<h3>پوسته وردپرس وب نوشت (به زودی...)</h3>
+		<img alt="قالب وردپرس وب نوشت" src="webNevesht.png">
+		
+		<h3>قالب تمشک برای بلاگ بیان(blog.ir)</h3>
+		<img alt="قالب وبلاگ تمشک" src="raspberry.jpg">
+  
+		<div class="clear"></div>
+  
+
+		</div> 
+		
+		</div>
+	</div>
+	
+	<div id="contact" class="modal2">
+		<div class="contact">
+			<div class="header">
+				<span class="close2">&times;</span>
+				<span>ارتباط با من</span>
+				<div class="content">
+				
+				<p>سلام!<br>
+				اگه برای پروژه تون دنبال طراح رابط کاربری هستین، جای درستی اومدین! خوشحال میشم با شما همکاری داشته باشم.
+				</p>
+				<ul>
+					<li><a href="#"><div class="instagram"></div></a></li>
+					<li><a href="#"><div class="telegram"></div></a></li>
+					<li><a href="#"><div class="email"></div></a></li>
+				</ul>
+				<div class="message">
+					<form method="post" action="mail.php">
+					
+						<div class="input">
+						<label for="fname">نام</label>
+						<input type="text" id="fname" name="name">
+						</div>
+						
+						<div class="input">
+						<label for="lname">ایمیل</label>
+						<input type="email" id="lname" name="email">
+						</div>
+						
+						
+						
+						<textarea id="subject" name="message" placeholder="پیامتو بنویس..." style="height:200px"></textarea>
+						
+    			<input type="submit" name="submit" value="بفرست!">
+  			</form>
+			</div>
+			<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	// Get the modal
+var modal1 = document.getElementById('portfolio');
+
+// Get the button that opens the modal
+var btn = document.getElementById("portfolioLink");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close1")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal1.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+} 
+	</script>
+	
+	<script>
+	// Get the modal
+var modal2 = document.getElementById('contact');
+
+// Get the button that opens the modal
+var btn = document.getElementById("contactLink");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close2")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+} 
+	</script>
 </body>
 </html>
