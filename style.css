@@ -1,0 +1,581 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: 'Shabnam', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+.overlay{
+	background-color: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	animation-name: background-delay;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	z-index: 10;
+}
+.background{
+	background-image: url(back.jpg);
+	/* header photo by hiva sharifi on Unsplash */
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+}
+@keyframes background-delay{
+	from{
+		
+	}
+	to{
+		transform: scale(0);
+		
+	}
+}
+.main{
+	position: fixed;
+	width: 100%;
+}
+.avatar{
+}
+
+.avatar > img{
+	width: 25%;
+	margin-right: 37.5%;
+	animation-name: avatar-move;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	position: fixed;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+}
+@keyframes avatar-move{
+	from {
+		bottom:0;
+	}
+	to {
+		bottom: 40%;
+	}
+}
+.tea-cup{
+	margin-right: 61%;
+	bottom: 39%;
+	opacity: 0;
+	position: fixed;
+	animation-name: tea-show;
+	animation-delay: 0s;
+	animation-duration: .1s;
+	animation-fill-mode: forwards;
+}
+@keyframes tea-show{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+.tea-cup img:nth-child(1){
+	position: relative;
+	left: -40px;
+	animation-name: smoke1;
+	animation-duration: 1.7s;
+	animation-delay: .6s;
+	animation-iteration-count: infinite;
+	bottom: 35px;
+	transform: translateY(3px);
+}
+@keyframes smoke1{
+	0%{
+	opacity: .2
+	}
+	70%{
+	opacity: .6;
+	transform: translateY(-3px);
+	}
+	100%{
+	opacity: 0;
+	transform: translateY(-4px);
+	}
+}
+.tea-cup img:nth-child(2){
+	position: relative;
+	left: -42px;
+	animation-name: smoke2;
+	animation-duration: 1.7s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	bottom: 35px;
+	transform: translateY(3px);
+}
+@keyframes smoke2{
+	0%{
+	opacity: .2
+	}
+	70%{
+	opacity: .6;
+	transform: translateY(-3px);
+	}
+	100%{
+	opacity: 0;
+	transform: translateY(-4px);
+	}
+}
+.tea-cup img:nth-child(3){
+}
+.main > .content{
+	width: 40%;
+	height: 20%;
+	background-color: #FFFFFF;
+	margin-right: 30%;
+	-webkit-box-shadow: 0px 0px 7px -1px rgba(168,168,168,1);
+	-moz-box-shadow: 0px 0px 7px -1px rgba(168,168,168,1);
+	box-shadow: 0px 0px 7px -1px rgba(168,168,168,1);
+	position: fixed;
+	bottom: 20%;
+	border-radius: 5px;
+	text-align: center;
+	animation-name: content-show;
+	animation-delay: 3s;
+	animation-duration: 0.1s;
+	animation-fill-mode: forwards;
+	margin-top: 10px;	
+}
+ 
+.main > .content h1{
+	color: #2F4A67;
+	display: inline;
+	opacity: 0;
+	animation-name: h1-show;
+	animation-delay: 3s;
+	animation-duration: .2s;
+	animation-fill-mode: forwards;
+}
+@keyframes h1-show{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+.main > .content h3{
+	font-family: 'Samim', sans-serif;
+	color: #35424C;
+	font-weight: normal;
+	display: inline;
+	opacity: 0;
+	animation-name: h3-show;
+	animation-delay: 3.2s;
+	animation-duration: .2s;
+	animation-fill-mode: forwards;
+}
+@keyframes h3-show{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+/*
+@keyframes content-show{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}*/
+.menu{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	opacity: 0;
+	animation-name: menu-show;
+	animation-delay: 3.4s;
+	animation-duration: .2s;
+	animation-fill-mode: forwards;
+}
+@keyframes menu-show{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+.menu a{
+	background-color: #FFFFFF;
+	width: 70px;
+	height: 70px;
+	-webkit-box-shadow: 0px 0px 2px rgba(168,168,168,1);
+	-moz-box-shadow: 0px 0px 7px -1px rgba(168,168,168,1);
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px rgba(168,168,168,1);
+	
+}
+.menu a {
+	padding-top: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 14px;
+	font-weight: lighter;
+	color: #343434;
+}
+.menu a:nth-child(1){
+	background-image: url(portfolio.svg);
+	background-repeat: no-repeat;
+	background-size: 50px 40px;
+	background-position: 10px 5px;
+	transition: 0.5s;
+}
+.menu a:nth-child(1):hover{
+	background-image: url(portfolio1.svg);
+	background-color: #EDEDED;
+}
+.menu a:nth-child(2){
+	background-image: url(letter.svg);
+	background-repeat: no-repeat;
+	background-size: 50px 40px;
+	background-position: 10px 5px;
+	transition: 0.5s;
+}
+.menu a:nth-child(2):hover{
+	background-image: url(letter1.svg);
+	background-color: #EDEDED;
+}
+
+ /* The Modal (background) */
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.portfolio {
+    background-color: #fefefe;
+    margin: auto auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+}
+.portfolio .header {
+	width: 100%;
+	height: 200px;
+	background-image: url(unsplash.jpg);
+	background-position: bottom left;
+	background-size: cover;
+	text-align: center;
+}
+.portfolio .header span:nth-child(2) {
+	line-height: 200px;
+	padding: 10px 20px;
+	border-radius:5px;
+	background-color: white;
+}
+.portfolio .content {
+	width: 100%;
+	background-color: white;
+	padding-bottom: 30px;
+}
+.portfolio .content h3 {
+	font-weight: normal;
+	margin-top: 30px;
+	margin-right: 5%;
+	color: #2d2d2d;
+}
+.portfolio .content img {
+	width: 90%;
+	height: 300px;
+	margin: 10px 5%;
+}
+
+
+
+/* The Close Button */
+.close1 {
+    color: black;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+	background-color: white;
+	right: 0;
+	padding: 0 6px;
+	opacity: .4;
+}
+
+.close1:hover,
+.close1:focus {
+	opacity: .7;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+/* The Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.contact {
+    background-color: #fefefe;
+    margin: auto auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+}
+.contact .header {
+	width: 100%;
+	height: 200px;
+	background-image: url(pavan.jpg);
+	background-position: center center;
+	background-size: cover;
+	text-align: center;
+}
+.contact .header span:nth-child(2) {
+	line-height: 200px;
+	padding: 10px 20px;
+	border-radius:5px;
+	background-color: white;
+}
+.contact .content {
+	width: 100%;
+	background-color: white;
+	padding-bottom: 50px;
+	padding-top: 10px;
+}
+.content p{
+	font-family: 'sahel', sans-serif;
+	text-align: right;
+	width: 60%;
+	margin-right: 20%;
+}
+.content ul{
+	width: 70%;
+	height: 40px;
+	float: left;
+	margin: 15px 15px 15px 20%;
+}
+.content ul li{
+	float: left;
+	list-style: none;
+	margin-right: 20px;
+
+}
+.content ul li a{
+}
+.content .instagram{
+	width: 40px;
+	height: 40px;
+	background-image: url(instagram5.svg);
+	background-size: 40px 40px;
+}
+
+.content .telegram{
+	width: 40px;
+	height: 40px;
+	background-image: url(telegram5.svg);
+	background-size: 40px 40px;
+}
+
+.content .email{
+	width: 40px;
+	height: 40px;
+	background-image: url(gmail5.svg);
+	background-size: 40px 40px;
+}
+/* The Close Button */
+.close2 {
+    color: black;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+	background-color: white;
+	right: 0;
+	padding: 0 6px;
+	opacity: .4;
+}
+
+.close2:hover,
+.close2:focus {
+	opacity: .7;
+    text-decoration: none;
+    cursor: pointer;
+} 
+.clear{
+	clear: both;
+}
+.message{
+	width: 60%;
+	margin-right: 20%;
+	padding-top: 80px;
+	margin-bottom: 50px;
+}
+.message .input{
+	height: 35px;
+	padding-top: 10px;
+}
+.message label{
+	float: right;
+	line-height: 35px;
+}
+.message input[type=text] {
+    width: 70%;
+	height: 100%;
+	float: left;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	margin-right: 15%;
+    resize: vertical;
+}
+.message input[type=email] {
+    width: 70%;
+	height: 100%;
+	float: left;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 26px;
+	margin-right: 15%;
+    resize: vertical;
+}
+.message textarea {
+	font-family: 'sahel', sans-serif;
+	width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+.message input[type=submit] {
+	font-family: 'Sahel';
+	float: left;
+	background-color: white;
+	color: black;
+	padding: 12px 20px;
+	border: none;
+	-webkit-box-shadow: 0px 0px 2px rgba(168,168,168,1);
+	-moz-box-shadow: 0px 0px 7px -1px rgba(168,168,168,1);
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px rgba(168,168,168,1);
+	transition: .3s;
+}
+
+.message input[type=submit]:hover {
+	background-color: #EDEDED;
+}
+
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.background{
+		background-image: none;
+		background: #2BC0E4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		opacity: .4;
+	}
+	.avatar > img{
+		width: 60%;
+		margin-right: 17%;
+	}
+	@keyframes avatar-move{
+	from {
+		bottom:0;
+	}
+	to {
+		bottom: 40%;
+	}
+}
+.tea-cup{
+	margin-right: 61%;
+	bottom: 39%;
+}
+	.main > .content{
+		width: 80%;
+		margin-right: 10%;
+	}
+	
+	.menu{
+}
+
+.portfolio {
+	width: 100%;
+	margin: 0;
+}
+.contact {
+	width: 100%;
+	margin: 0;
+}
+
+.message{
+	width: 60%;
+	margin-right: 20%;
+	padding-top: 80px;
+	margin-bottom: 50px;
+}
+.message input[type=text] {
+    width: 100%;
+}
+.message input[type=email] {
+    width: 100%;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+.tea-cup{
+	margin-right: 60%;
+	bottom: 39%;
+}
+
+	
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.background{
+		background-image: url(back.jpg);
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...} 
